@@ -29,7 +29,7 @@ export default {
     const db = new pouchdb("todos");
     const remoteDB = "https://admin:327140002Hm@couch.nanoafrika.com/todos";
     db
-      .sync(remoteDB, { live: true })
+      .sync(remoteDB, { live: true, retry: true })
       .on("complete", function() {
         console.log("yay, we're in sync!");
       })
