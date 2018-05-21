@@ -27,7 +27,7 @@ export default {
   },
   created() {
     const db = new pouchdb("todos");
-    const remoteDB = "http://admin:327140002Hm@159.89.104.249:5984/todos";
+    const remoteDB = "https://admin:327140002Hm@couch.nanoafrika.com/todos";
     db
       .sync(remoteDB, { live: true })
       .on("complete", function() {
